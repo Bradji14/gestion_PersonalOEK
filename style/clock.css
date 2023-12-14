@@ -1,0 +1,214 @@
+:root {
+    --primary-color: #f6f7fb;
+    --white-color: #1a75bb;
+    --black-color: #ffff;
+    --red-color: #e74c3c;
+  }
+  body {
+    background: url('../img/food2.png');
+    background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        
+  }
+  body.dark {
+    --primary-color: #242526;
+    --white-color: #18191a;
+    --black-color: #fff;
+    --red-color: #e74c3c;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  .container .clock {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: var(--white-color);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1), 0 25px 45px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .clock label {
+    position: absolute;
+    inset: 20px;
+    text-align: center;
+    transform: rotate(calc(var(--i) * (360deg / 12)));
+  }
+  .clock label span {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--black-color);
+    transform: rotate(calc(var(--i) * (-360deg / 12)));
+  }
+  .container .indicator {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .indicator::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: 100;
+    background: var(--black-color);
+    border: 4px solid var(--red-color);
+  }
+  .indicator .hand {
+    position: absolute;
+    height: 130px;
+    width: 4px;
+    bottom: 0;
+    border-radius: 25px;
+    transform-origin: bottom;
+    background: var(--red-color);
+  }
+  .hand.minute {
+    height: 120px;
+    width: 5px;
+    background: var(--black-color);
+  }
+  .hand.hour {
+    height: 100px;
+    width: 8px;
+    background: var(--black-color);
+  }
+  .mode-switch {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 400;
+    display: inline-block;
+    color: var(--white-color);
+    background: var(--black-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+
+
+/* CSS */
+.submit {
+  background-color: #2196f3 ;
+  border: 2px solid #003785;
+  border-radius: 30px;
+  box-shadow: #b9ffff 4px 4px 0 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.submit:hover {
+  background-color: #003785;
+}
+
+.submit:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .submit {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.submits {
+  background-color: #2196f3 ;
+  border: 2px solid #003785;
+  border-radius: 30px;
+  box-shadow: #b9ffff 4px 4px 0 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.submits:hover {
+  background-color: #003785;
+}
+
+.submits:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .submits {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+
+
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid #fff;
+  cursor: pointer;
+  position: relative;
+  background-color: #F1580E ;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  color:#ffff;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #a80707;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
